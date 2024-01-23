@@ -1,0 +1,9 @@
+services:
+  vol:
+    build: .
+    volumes:
+      - ./scripts:/scripts
+    working_dir: /scripts
+    command: bash -c "./hello.sh"  # できるパターン
+    # command: bash hello2.sh  # できるパターン
+    # command: bash -c "./hello2.sh" # できないパターン
